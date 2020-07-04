@@ -15,5 +15,9 @@ def main():
             headline = news_row.find("div", class_="news-list-title")
             print(headline.text)
 
+    with urllib.request.urlopen('https://www.eso.org/public/news') as response:
+        data = response.read()
+        print(data)
+
 if __name__ == "__main__":
     main()
